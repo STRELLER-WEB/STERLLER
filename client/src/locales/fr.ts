@@ -231,6 +231,42 @@ export const fr: SiteContent = {
     line1: "Société égyptienne de production culturelle · Le Caire, Égypte · Fondée en 2024.",
     line2: `${P} est un projet en développement.`,
     privacyLink: "Politique de confidentialité",
+    legalLink: "Mentions légales",
+  },
+  legal: {
+    title: "Mentions légales",
+    intro:
+      "Informations sur l'exploitant de ce site web, conformément aux exigences européennes en matière de mentions légales.",
+    companyHeading: "Coordonnées de la société",
+    labels: {
+      company: "Société",
+      address: "Adresse enregistrée",
+      representative: "Représentant légal",
+      register: "N° de registre du commerce",
+      taxId: "Identifiant fiscal",
+      email: "E-mail",
+      phone: "Téléphone",
+    },
+    sections: [
+      {
+        title: "Responsabilité du contenu",
+        body: [
+          "Le contenu de ce site a été préparé avec soin. STRELLER est responsable de ses propres contenus publiés sur ces pages. Nous ne pouvons garantir que toutes les informations soient complètes, exactes et à jour à tout moment ; le projet décrit ici est en développement actif et certains détails peuvent évoluer.",
+        ],
+      },
+      {
+        title: "Liens externes",
+        body: [
+          "Ce site contient des liens vers des sites externes exploités par des tiers. Nous n'avons aucune influence sur leur contenu et déclinons toute responsabilité à leur égard ; l'exploitant des pages liées en reste seul responsable. Aucun contenu illicite n'était identifiable au moment de la création des liens.",
+        ],
+      },
+      {
+        title: "Droits d'auteur",
+        body: [
+          "Le contenu, les images et le design de ce site sont protégés par le droit d'auteur. Toute reproduction, modification ou diffusion au-delà des limites du droit d'auteur nécessite l'accord écrit préalable de STRELLER.",
+        ],
+      },
+    ],
   },
   privacy: {
     title: "Politique de confidentialité",

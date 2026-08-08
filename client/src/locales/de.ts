@@ -231,6 +231,42 @@ export const de: SiteContent = {
     line1: "Ägyptisches Kulturproduktionsunternehmen · Kairo, Ägypten · Gegründet 2024.",
     line2: `${P} ist ein Projekt in Entwicklung.`,
     privacyLink: "Datenschutzerklärung",
+    legalLink: "Impressum",
+  },
+  legal: {
+    title: "Impressum",
+    intro:
+      "Angaben zum Betreiber dieser Website entsprechend den europäischen Anforderungen an ein Impressum.",
+    companyHeading: "Unternehmensangaben",
+    labels: {
+      company: "Unternehmen",
+      address: "Eingetragene Anschrift",
+      representative: "Vertretungsberechtigter",
+      register: "Handelsregister-Nr.",
+      taxId: "Steuernummer",
+      email: "E-Mail",
+      phone: "Telefon",
+    },
+    sections: [
+      {
+        title: "Verantwortung für Inhalte",
+        body: [
+          "Die Inhalte dieser Website wurden mit Sorgfalt erstellt. STRELLER ist für die eigenen Inhalte auf diesen Seiten verantwortlich. Für die ständige Vollständigkeit, Richtigkeit und Aktualität aller Angaben können wir keine Gewähr übernehmen; das hier beschriebene Projekt befindet sich in aktiver Entwicklung, Details können sich ändern.",
+        ],
+      },
+      {
+        title: "Externe Links",
+        body: [
+          "Diese Website enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss haben. Für diese Inhalte übernehmen wir keine Haftung; verantwortlich ist stets der jeweilige Betreiber der verlinkten Seiten. Zum Zeitpunkt der Verlinkung waren keine rechtswidrigen Inhalte erkennbar.",
+        ],
+      },
+      {
+        title: "Urheberrecht",
+        body: [
+          "Inhalte, Bildmaterial und Gestaltung dieser Website sind urheberrechtlich geschützt. Jede Vervielfältigung, Bearbeitung oder Verbreitung außerhalb der Grenzen des Urheberrechts bedarf der vorherigen schriftlichen Zustimmung von STRELLER.",
+        ],
+      },
+    ],
   },
   privacy: {
     title: "Datenschutzerklärung",

@@ -122,12 +122,28 @@ export interface SiteContent {
     line1: string;
     line2: string;
     privacyLink: string;
+    legalLink: string;
   };
   privacy: {
     title: string;
     lastUpdated: string;
     backToHome: string;
     intro: string;
+    sections: { title: string; body: string[] }[];
+  };
+  legal: {
+    title: string;
+    intro: string;
+    companyHeading: string;
+    labels: {
+      company: string;
+      address: string;
+      representative: string;
+      register: string;
+      taxId: string;
+      email: string;
+      phone: string;
+    };
     sections: { title: string; body: string[] }[];
   };
 }

@@ -14,4 +14,14 @@ export const siteConfig = {
   projectUrl: "https://pharaonika.com/",
   foundedYear: 2024,
   foundingCity: "Cairo",
+  /** Official registration details for the legal notice (Impressum) page — confirmed by the owner. */
+  legalInfo: {
+    legalName: "Streller General Trading",
+    address: "4 Omar Lotfy Street, Nasr City, Cairo, Egypt",
+    representative: "Khaled Elfqey",
+    email: "info@strellereg.com",
+    phone: "+20 108 018 5474",
+    commercialRegister: "234187",
+    taxId: "763-006-971",
+  },
 } as const;

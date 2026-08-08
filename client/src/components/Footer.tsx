@@ -26,12 +26,20 @@ export function Footer() {
           <span>
             © {new Date().getFullYear()} {siteConfig.companyName}
           </span>
-          <a
-            href={`/${locale}/privacy`}
-            className="min-h-[44px] text-xs font-semibold text-papyrus/70 underline-offset-4 hover:underline sm:flex sm:items-center"
-          >
-            {t.footer.privacyLink}
-          </a>
+          <span className="flex flex-col gap-2 sm:flex-row sm:items-center sm:gap-6">
+            <a
+              href={`/${locale}/privacy`}
+              className="min-h-[44px] text-xs font-semibold text-papyrus/70 underline-offset-4 hover:underline sm:flex sm:items-center"
+            >
+              {t.footer.privacyLink}
+            </a>
+            <a
+              href={`/${locale}/legal`}
+              className="min-h-[44px] text-xs font-semibold text-papyrus/70 underline-offset-4 hover:underline sm:flex sm:items-center"
+            >
+              {t.footer.legalLink}
+            </a>
+          </span>
         </div>
       </div>
     </footer>

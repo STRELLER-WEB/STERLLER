@@ -226,6 +226,42 @@ export const en: SiteContent = {
     line1: "Egyptian cultural production company · Cairo, Egypt · Founded 2024.",
     line2: `${P} is a project in development.`,
     privacyLink: "Privacy Policy",
+    legalLink: "Legal Notice",
+  },
+  legal: {
+    title: "Legal Notice",
+    intro:
+      "Information about the operator of this website, provided in line with European legal-notice (Impressum) requirements.",
+    companyHeading: "Company details",
+    labels: {
+      company: "Company",
+      address: "Registered address",
+      representative: "Legal representative",
+      register: "Commercial register no.",
+      taxId: "Tax ID",
+      email: "Email",
+      phone: "Phone",
+    },
+    sections: [
+      {
+        title: "Responsibility for content",
+        body: [
+          "The content of this website has been prepared with care. STRELLER is responsible for its own content on these pages. We cannot guarantee that all information is complete, correct and up to date at all times; the project described here is in active development and details may change.",
+        ],
+      },
+      {
+        title: "External links",
+        body: [
+          "This website contains links to external websites operated by third parties. We have no influence over their content and accept no liability for it; the respective operator is always responsible for the content of linked pages. No unlawful content was identifiable at the time the links were created.",
+        ],
+      },
+      {
+        title: "Copyright",
+        body: [
+          "The content, imagery and design of this website are protected by copyright. Any reproduction, editing or distribution beyond the limits of copyright law requires the prior written consent of STRELLER.",
+        ],
+      },
+    ],
   },
   privacy: {
     title: "Privacy Policy",

@@ -158,6 +158,10 @@ ${locales.map((alt) => `    <xhtml:link rel="alternate" hreflang="${alt}" href="
     <loc>${siteUrl}/${l}/privacy</loc>
 ${locales.map((alt) => `    <xhtml:link rel="alternate" hreflang="${alt}" href="${siteUrl}/${alt}/privacy" />`).join("\n")}
   </url>`,
+      `  <url>
+    <loc>${siteUrl}/${l}/legal</loc>
+${locales.map((alt) => `    <xhtml:link rel="alternate" hreflang="${alt}" href="${siteUrl}/${alt}/legal" />`).join("\n")}
+  </url>`,
     ])
     .join("\n");
   return `<?xml version="1.0" encoding="UTF-8"?>
