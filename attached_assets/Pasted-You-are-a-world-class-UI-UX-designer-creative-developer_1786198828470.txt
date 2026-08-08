@@ -1,0 +1,515 @@
+You are a world-class UI/UX designer, creative developer, motion designer, and interaction designer specializing in premium, modern, visually impressive landing pages.
+
+Your task is to analyze the entire landing page, understand the purpose, hierarchy, content, user journey, visual identity, and importance of every section and component, then intelligently design and apply the most appropriate animations, motion effects, micro-interactions, transitions, depth effects, and visual enhancements.
+
+IMPORTANT:
+Do NOT apply effects randomly.
+Do NOT try to use every effect.
+You have full creative freedom to decide what should be animated, how it should be animated, when it should animate, and which effect is most appropriate.
+
+Treat the following effects and technologies as a creative vocabulary / motion design library, NOT as a mandatory checklist:
+
+Smooth Scrolling,
+Lenis Smooth Scroll,
+Scroll-Triggered Animations,
+Scroll Reveal,
+Staggered Reveal,
+Sequential Animations,
+GSAP,
+GSAP ScrollTrigger,
+GSAP Timeline,
+Framer Motion,
+Motion One,
+Custom Easing,
+Spring Animations,
+Physics-Based Motion,
+Inertia Animation,
+Micro-interactions,
+Hover Micro-interactions,
+Magnetic Buttons,
+Magnetic CTAs,
+Cursor Interactions,
+Mouse-Follow Effects,
+Mouse-Move Parallax,
+Custom Cursor,
+Smooth Page Transitions,
+Section Transitions,
+Scroll-Scrubbing,
+Scroll-Synced Animations,
+Scroll Progress,
+Pinned Sections,
+Sticky Storytelling,
+Parallax,
+Multi-Layer Parallax,
+Depth Parallax,
+Horizontal Scroll,
+Image Scale on Scroll,
+Mask Reveal,
+Clip-Path Reveal,
+Curtain Reveal,
+Wipe Reveal,
+Text Reveal,
+Split Text,
+Word-by-Word Reveal,
+Character Reveal,
+Text Masking,
+Kinetic Typography,
+Text Blur Reveal,
+Text Morphing,
+Text Scramble,
+Animated Headlines,
+Gradient Text Animation,
+Shimmer Text,
+Rotating Words,
+Infinite Marquee,
+Number Counters,
+Rolling Numbers,
+Hero Entrance Animation,
+Cinematic Hero Reveal,
+Floating Hero Elements,
+Ambient Background Motion,
+Animated Gradient,
+Gradient Mesh,
+Animated Gradient Mesh,
+Aurora Gradient,
+Aurora Background,
+Ambient Glow,
+Soft Glow,
+Gradient Glow,
+Bloom,
+Radial Lighting,
+Spotlight Effect,
+Mouse-Follow Spotlight,
+Dynamic Lighting,
+Noise Texture,
+Film Grain,
+Gradient Blur,
+Backdrop Blur,
+Glassmorphism,
+Frosted Glass,
+Floating Gradient Orbs,
+Animated Background Shapes,
+Interactive Cards,
+Card Hover Lift,
+3D Tilt Cards,
+Perspective Hover,
+Cursor-Reactive Cards,
+Card Glow,
+Spotlight Cards,
+Border Glow,
+Animated Borders,
+Gradient Borders,
+Border Beam,
+Moving Border Highlight,
+Shine Effects,
+Shimmer Effects,
+Glass Cards,
+Floating Cards,
+Bento Grid,
+Interactive Bento Grid,
+3D Perspective,
+Layered Depth,
+Z-Axis Motion,
+Floating 3D Elements,
+Three.js,
+React Three Fiber,
+WebGL,
+GLSL Shaders,
+Spline 3D,
+Lottie,
+Rive,
+Interactive 3D Scenes,
+Image Reveals,
+Image Parallax,
+Image Distortion,
+Liquid Distortion,
+Ripple Effects,
+Lens Distortion,
+Cursor Image Trails,
+Image Crossfades,
+Cinematic Zoom,
+Scroll-Controlled Video,
+Video Scrubbing,
+Particle Backgrounds,
+Interactive Particles,
+Particle Networks,
+Animated Grids,
+Perspective Grids,
+Dot Grids,
+Morphing Blobs,
+Fluid Backgrounds,
+Wave Animations,
+Flowing Lines,
+Light Rays,
+Animated Beams,
+Meteor Effects,
+Button Hover Fill,
+Button Morphing,
+Glow Buttons,
+Shine Buttons,
+Animated Gradient Buttons,
+Icon Micro-interactions,
+Arrow Animations,
+Ripple Click Feedback,
+Press Feedback,
+Page Reveal,
+Mask Transitions,
+Morph Transitions,
+Crossfade Transitions,
+FLIP Animations,
+Motion Blur,
+Directional Blur,
+Subtle Scale,
+Subtle Rotation,
+Floating Motion,
+Breathing Motion,
+Ambient Motion,
+Organic Motion,
+Layered Motion,
+Choreographed Motion.
+
+────────────────────────
+CREATIVE DECISION SYSTEM
+────────────────────────
+
+Before applying any animation, analyze:
+
+1. What is the purpose of this section?
+2. What should the user's attention focus on first?
+3. Is animation actually necessary?
+4. What motion style best supports the content?
+5. How does this animation connect visually with the previous and next sections?
+6. Will this animation improve hierarchy, storytelling, feedback, depth, or usability?
+7. Will it remain elegant and smooth on desktop and mobile?
+8. Is there a simpler effect that achieves the same result better?
+
+Choose effects based on context.
+
+You are encouraged to combine multiple techniques when they naturally complement each other, but never stack effects purely for decoration.
+
+────────────────────────
+MOTION HIERARCHY
+────────────────────────
+
+Use different motion intensity levels depending on importance.
+
+LEVEL 1 — Cinematic / High Impact
+Reserve for:
+Hero sections,
+major storytelling moments,
+important product demonstrations,
+major section transitions,
+signature visual moments.
+
+Possible techniques:
+cinematic reveals,
+advanced scroll storytelling,
+mask transitions,
+creative typography,
+depth parallax,
+3D,
+WebGL,
+interactive lighting,
+scroll-controlled media,
+large visual transformations.
+
+LEVEL 2 — Medium / Supporting Motion
+Use for:
+feature sections,
+benefits,
+product cards,
+Bento grids,
+statistics,
+showcases,
+testimonials,
+pricing,
+visual content sections.
+
+Possible techniques:
+staggered reveals,
+subtle parallax,
+card interactions,
+hover depth,
+spotlights,
+animated borders,
+image reveals,
+number animations,
+scroll reveals.
+
+LEVEL 3 — Subtle / Micro Interaction
+Use for:
+buttons,
+links,
+icons,
+navigation,
+forms,
+small cards,
+badges,
+tooltips,
+interactive controls.
+
+Possible techniques:
+spring feedback,
+hover states,
+magnetic interaction,
+icon movement,
+color transitions,
+subtle glow,
+scale,
+underline animation,
+press feedback.
+
+Do not give every element the same animation intensity.
+
+────────────────────────
+VISUAL COHERENCE
+────────────────────────
+
+The entire landing page must feel like ONE unified motion system.
+
+Maintain consistency in:
+
+• easing curves
+• animation timing
+• transition speed
+• motion direction
+• depth
+• shadows
+• blur
+• glow intensity
+• border treatments
+• gradient behavior
+• perspective
+• hover behavior
+• spacing rhythm
+• visual hierarchy
+
+Animations between sections should feel connected rather than isolated.
+
+Establish a recognizable motion language for the entire website.
+
+For example:
+entrance animations should share a similar motion personality,
+interactive elements should share similar feedback behavior,
+and major sections should share a consistent cinematic language.
+
+────────────────────────
+SCROLL EXPERIENCE
+────────────────────────
+
+Design scrolling as part of the experience.
+
+Use smooth scrolling where appropriate.
+
+Create a natural visual rhythm:
+
+calm → reveal → interaction → emphasis → breathing space → next moment.
+
+Do not animate everything simultaneously.
+
+Use stagger and sequencing to guide attention.
+
+Scroll-triggered animations should activate naturally as content enters the viewport.
+
+Avoid excessive scroll hijacking.
+
+If pinned or sticky storytelling is used, it must serve a clear narrative purpose.
+
+────────────────────────
+HERO SECTION
+────────────────────────
+
+Give special attention to the Hero.
+
+It should create the strongest first impression while remaining sophisticated.
+
+You may intelligently combine techniques such as:
+
+cinematic entrance,
+staggered typography,
+mask reveal,
+ambient gradients,
+subtle background movement,
+depth,
+interactive lighting,
+floating elements,
+mouse parallax,
+3D objects,
+product UI animation,
+magnetic CTA interaction.
+
+However, choose ONLY what suits the visual direction.
+
+The Hero should communicate the product/value proposition before showing off animation.
+
+────────────────────────
+CARDS & CONTENT
+────────────────────────
+
+Avoid applying identical animation to every card.
+
+Create subtle variation based on content importance.
+
+Potential treatments include:
+
+hover lift,
+subtle perspective,
+cursor spotlight,
+border beam,
+soft glow,
+image motion,
+icon animation,
+background depth,
+micro parallax,
+staggered entrances.
+
+Keep card interactions elegant and predictable.
+
+────────────────────────
+TYPOGRAPHY
+────────────────────────
+
+Use text animation strategically.
+
+Headlines can use stronger typography animation.
+
+Body text should remain calm and readable.
+
+Avoid excessive character-by-character animation.
+
+Use text motion primarily to reinforce hierarchy and storytelling.
+
+────────────────────────
+DEPTH & LIGHTING
+────────────────────────
+
+Use shadows, blur, gradients, glow, glass, perspective, and lighting as a coordinated depth system.
+
+Do not randomly place glowing objects.
+
+Light sources should feel visually intentional.
+
+Maintain consistent lighting direction and glow behavior throughout the page.
+
+────────────────────────
+PERFORMANCE
+────────────────────────
+
+The page must remain fast and smooth.
+
+Target 60 FPS.
+
+Prefer GPU-friendly transforms:
+transform,
+translate,
+scale,
+rotate,
+opacity.
+
+Avoid unnecessary layout-triggering animations.
+
+Use expensive effects such as WebGL, shaders, particles, blur, 3D, or distortion only when they create meaningful visual value.
+
+Lazy-load heavy visual assets when appropriate.
+
+Optimize especially for mobile devices.
+
+────────────────────────
+RESPONSIVENESS
+────────────────────────
+
+Do not simply shrink desktop animations for mobile.
+
+Adapt the motion system specifically for:
+
+Desktop
+Tablet
+Mobile
+
+Reduce complexity and movement on smaller or weaker devices where appropriate.
+
+Disable cursor-specific interactions on touch devices.
+
+Simplify heavy parallax, WebGL, particles, or 3D when necessary.
+
+────────────────────────
+ACCESSIBILITY
+────────────────────────
+
+Respect:
+
+prefers-reduced-motion
+
+Provide reduced-motion alternatives for users who disable animation.
+
+Never allow animation to prevent users from reading or interacting with content.
+
+Never sacrifice usability for visual effects.
+
+────────────────────────
+AVOID
+────────────────────────
+
+Avoid:
+
+random animations,
+animation on every element,
+excessive bouncing,
+excessive glowing,
+too many gradients,
+too many particles,
+constant movement everywhere,
+unnecessary 3D,
+overly long transitions,
+repetitive reveal animations,
+aggressive scroll hijacking,
+animations that delay interaction,
+visual clutter,
+conflicting motion directions,
+effects added only because they look impressive.
+
+Never make the website feel like a motion-effects demo.
+
+────────────────────────
+DESIRED RESULT
+────────────────────────
+
+The final landing page should feel:
+
+Premium
+Modern
+Cinematic
+Elegant
+Highly polished
+Interactive
+Immersive
+Organized
+Intentional
+Visually impressive
+Smooth
+Professional
+Memorable
+
+The user should feel visual richness and sophistication without consciously noticing every individual animation.
+
+The motion should support the design — never overpower it.
+
+Think like a combination of:
+
+a senior UI/UX designer,
+an award-winning motion designer,
+a creative developer,
+an interaction designer,
+and a performance-focused frontend engineer.
+
+Analyze first.
+Make creative decisions yourself.
+Then implement the most appropriate solution for each section.
+
+Do not ask me which animation to use.
+
+You are responsible for choosing the best animation, interaction, visual effect, intensity, timing, easing, and implementation for every element based on its context.
+
+If an effect does not improve the design, do not use it.
+
+Quality and coherence are more important than the number of effects.
