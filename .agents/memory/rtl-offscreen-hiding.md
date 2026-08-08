@@ -10,6 +10,6 @@ Rule: never hide elements with large negative offsets (e.g. `-left-[9999px]`, `t
 **How to apply:** For honeypots, skip-links, and sr-only content, always use the clip pattern. When an RTL page looks blank or has a giant horizontal scrollbar, check `document.body.scrollWidth` and look for absolutely positioned elements with large negative offsets.
 
 Related Arabic/RTL rules from the same project:
-- Zero out letter-spacing for ALL tracked text under `html[lang="ar"]` (one global `* { letter-spacing: 0 !important }` beats per-class overrides — stray `tracking-*` classes always slip through).
+- Zero out letter-spacing for ALL tracked text under `html[lang="ar"]`, but exempt Latin brand lettering: `html[lang="ar"] *:not(.wordmark) { letter-spacing: 0 !important }` — a blanket rule silently strips intentional wordmark tracking.
 - Tailwind physical gradient directions (`bg-gradient-to-r`) don't flip in RTL; add an `rtl:bg-gradient-to-l` variant when the gradient exists for text readability.
 - In an SPA, hash deep-links (`/ar#contact`) need a post-render `scrollIntoView` retry — the browser's native anchor jump fires before React renders the target.

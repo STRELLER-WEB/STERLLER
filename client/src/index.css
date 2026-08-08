@@ -20,8 +20,9 @@
     font-family: Cairo, "Segoe UI", Tahoma, Arial, sans-serif;
   }
   /* Letter-spacing damages Arabic script — remove it everywhere, including
-     tracked eyebrows, captions and badges. */
-  html[lang="ar"] * {
+     tracked eyebrows, captions and badges. Elements marked `.wordmark`
+     (Latin brand lettering like STRELLER) keep their intentional tracking. */
+  html[lang="ar"] *:not(.wordmark) {
     letter-spacing: 0 !important;
   }
 

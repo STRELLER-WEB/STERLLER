@@ -11,7 +11,7 @@ export function PrivacyPage({ locale }: { locale: Locale }) {
       </a>
       <header className="border-b border-lapis/10 bg-paper">
         <div className="container-site flex min-h-[64px] items-center justify-between py-3">
-          <a href={`/${locale}`} className="font-display text-lg font-bold tracking-[0.08em] text-lapis">
+          <a href={`/${locale}`} className="wordmark font-display text-lg font-bold tracking-[0.08em] text-lapis">
             STRELLER
           </a>
           <a

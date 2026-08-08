@@ -91,7 +91,7 @@ export function Header() {
       <div className="container-site flex h-16 items-center justify-between gap-4 md:h-20">
         <a
           href="#main"
-          className="font-display text-xl font-bold tracking-[0.08em] text-paper"
+          className="wordmark font-display text-xl font-bold tracking-[0.08em] text-paper"
           aria-label="STRELLER"
         >
           STRELLER

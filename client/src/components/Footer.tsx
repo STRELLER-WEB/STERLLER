@@ -8,7 +8,7 @@ export function Footer() {
       <div className="container-site">
         <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
           <div>
-            <p className="font-display text-xl font-bold tracking-[0.08em] text-paper">STRELLER</p>
+            <p className="wordmark font-display text-xl font-bold tracking-[0.08em] text-paper">STRELLER</p>
             <p className="mt-3 text-sm leading-relaxed">{t.footer.line1}</p>
             <p className="mt-1 text-sm leading-relaxed">{t.footer.line2}</p>
           </div>
