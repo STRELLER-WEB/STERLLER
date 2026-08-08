@@ -1,0 +1,530 @@
+You are a senior product designer, brand designer, accessibility specialist, and staff-level full-stack engineer.
+
+Your task is to build a production-ready, mobile-first, bilingual institutional landing page for STRELLER, an Egyptian cultural-production company founded in Cairo in May 2024. STRELLER develops traveling exhibitions and public cultural experiences for European cities. Its first flagship project is PHARAONIKA, whose existing project website is <https://pharaonika.com/>.
+
+IMPORTANT: First inspect the existing Replit repository and preserve any useful configuration. Do not blindly reinitialize or delete working files. If the repository is empty, create a modern Next.js App Router project using the current stable Next.js version available in Replit, TypeScript strict mode, and Tailwind CSS. Use Server Components by default and Client Components only where interaction is required.
+
+==================================================
+1. STRATEGIC POSITIONING
+==================================================
+
+STRELLER is the corporate brand. PHARAONIKA is the exhibition/project brand.
+
+STRELLER builds credibility and explains who the company is.
+PHARAONIKA sells/explains the cultural experience.
+
+This STRELLER website is NOT a ticketing website and must NOT include ticket prices, visitor schedules, school booking, city dates, or detailed daily exhibition activities.
+
+Primary audiences:
+- European municipalities and city authorities
+- Exhibition venues
+- Cultural institutions and museums
+- Sponsors and funding organisations
+- Strategic, logistics, hospitality and media partners
+- Universities, schools and educational networks
+
+Primary conversion: Partner with STRELLER.
+Secondary conversion: Explore PHARAONIKA at <https://pharaonika.com/>.
+
+The company is in its development and launch phase. Be confident, transparent and institutional. Never fabricate achievements, partners, team members, visitor numbers, addresses, registrations, launch cities, or experience claims.
+
+Never claim:
+- “Europe’s largest exhibition”
+- “200 objects” unless placed behind a clearly editable verified-content flag
+- existing partners or a 20-year workshop network
+- a confirmed first city or opening date
+- a long completed-project history
+
+Use language such as:
+- in development
+- planned
+- proposed host format
+- seeking our first European host-city partner
+- working with specialist partners at each stage
+
+Use the project spelling PHARAONIKA because it matches pharaonika.com. Store the name in one site config constant so it can be changed globally if the final spelling becomes PHARAOHICA.
+
+==================================================
+2. BRAND AND ART DIRECTION
+==================================================
+
+Desired feeling: premium, cinematic, cultural, modern, calm, credible, Egyptian without tourist clichés.
+
+Visual principle: visual impact through restraint. Think premium museum, editorial documentary and modern European cultural institution—not a theme park.
+
+Color system:
+- Lapis Navy: #193855
+- Deep Navy: #0B1B2A
+- Desert Gold: #CBA052
+- Papyrus Cream: #F4F1EA
+- Paper: #FBFAF7
+- Terracotta Rust: #B85741
+- Nile Turquoise: #3A8E97
+- Obsidian Charcoal: #2B2C30
+
+Use navy for the hero and institutional areas, gold for fine details and dividers, papyrus for main surfaces, turquoise for primary actions, terracotta very sparingly, and charcoal for long-form text.
+
+Typography:
+- Latin display: Playfair Display
+- Latin body/UI: Montserrat
+- Arabic: Cairo
+Load only required weights and provide system fallbacks.
+
+Avoid:
+- cartoon hieroglyphs
+- fake luxury black-and-gold overload
+- excessive decorative borders
+- heavy shadows
+- generic icon grids everywhere
+- glossy 3D graphics
+- AI images containing fake text or logos
+
+Use large whitespace, fine gold rules, a restrained abstract “portal” motif, borders before shadows, 8–12px radii and a clear spacing system.
+
+==================================================
+3. IMAGE ASSETS
+==================================================
+
+Expect these optional files in /public/assets/:
+- hero-wide.jpg
+- hero-portrait.jpg
+- temple-corridor.jpg
+- artisan-papyrus.jpg
+
+If they exist, use them. If they do not exist, create elegant CSS gradient placeholders and generate an ASSET_GUIDE.md with the exact filenames, dimensions and prompts needed. Do not hotlink random copyrighted images.
+
+Use responsive art direction:
+- desktop hero: hero-wide.jpg, subject on the right, copy on the left
+- mobile hero: hero-portrait.jpg, subject in the lower third, copy above
+
+When an image is a concept rendering, show a discreet label: “Concept visualization” / “تصور بصري للمفهوم”.
+
+Alt text:
+- hero wide: Golden pharaonic mask illuminated in a dark museum setting.
+- hero portrait: Golden pharaonic mask beneath a beam of warm light.
+- temple: Ancient Egyptian-inspired temple corridor with monumental columns.
+- artisan: Egyptian artisan painting a papyrus artwork by hand.
+
+==================================================
+4. HERO INTERACTION
+==================================================
+
+Build a visually striking but lightweight hero.
+
+Required layers:
+1. responsive background image through <picture>
+2. dark navy readability gradients
+3. a very slow Ken Burns scale animation from 1 to 1.04
+4. a custom Canvas component called GoldenDustCanvas
+5. subtle pointer parallax capped at 8px
+
+GoldenDustCanvas requirements:
+- 28–40 particles on mobile, 60–85 on desktop
+- low-opacity gold tones
+- particle radius 0.5–2px
+- very slow movement
+- capped devicePixelRatio of 2
+- ResizeObserver
+- pause when the page is hidden
+- clean up requestAnimationFrame and listeners on unmount
+- pointer-events: none
+- aria-hidden=true
+- the effect must never block scrolling or clicks
+
+Respect prefers-reduced-motion: disable Ken Burns, particles, parallax and reveal movement when reduced motion is enabled.
+
+Do not use an autoplay video in version 1. The dynamic image/canvas solution should provide the visual impact with much better mobile performance.
+
+==================================================
+5. INFORMATION ARCHITECTURE
+==================================================
+
+Create these components:
+- Header
+- LanguageSwitch
+- Hero
+- GoldenDustCanvas
+- TrustStrip
+- About
+- Capabilities
+- FeaturedProject
+- WhyStreller
+- Partnerships
+- Impact
+- Roadmap
+- Values
+- ContactForm
+- Footer
+
+Navigation anchors:
+About / What We Do / PHARAONIKA / Partnerships / Impact / Contact
+
+Use a sticky transparent header that becomes a solid navy/cream surface after scrolling. The mobile menu must be accessible, at least 44x44px, close on Escape and outside click, trap focus appropriately, and lock body scroll while open.
+
+==================================================
+6. EXACT CONTENT — ENGLISH
+==================================================
+
+HERO
+Eyebrow: EGYPTIAN CULTURAL PRODUCTION · CAIRO
+Headline: Building cultural bridges between Egypt and Europe.
+Body: STRELLER develops traveling exhibitions and public cultural experiences that turn Egyptian heritage into education, connection and lasting audience value.
+Status: Founded in May 2024 · Currently in development and launch phase
+Primary CTA: Partner with STRELLER
+Secondary CTA: Explore PHARAONIKA
+Small line: STRELLER presents PHARAONIKA — our first European flagship project.
+
+TRUST STRIP
+Cairo-born / Europe-focused / Education-led / Partnership-built
+
+ABOUT
+Heading: A young company. A clear vision. A serious plan.
+Paragraph 1: STRELLER is an Egyptian cultural-production company founded in Cairo in May 2024. We are developing traveling exhibitions and public experiences that introduce Egyptian heritage through contemporary storytelling, education and participation.
+Paragraph 2: We do not present a long history of completed projects. We present a transparent launch-stage company built on research, phased planning and the commitment to work with specialist partners at every stage.
+Quote: Culture should not sit behind glass. It should move, teach, surprise and connect.
+
+WHAT WE DO
+1. Traveling Exhibition Development — We shape the exhibition concept, visitor journey and host-ready model from the first idea.
+2. Cultural Experience & Scenography — We coordinate narrative, spatial design, lighting, sound and interactive moments into one coherent experience.
+3. Educational Programming — We develop school visits and workshops that turn heritage into active learning.
+4. Host-City & Partnership Planning — We design the collaboration model for cities, venues, sponsors and cultural institutions.
+5. Audience & Community Engagement — We plan pathways for families, schools, community groups and visitors with different access needs.
+6. Operations & Specialist Coordination — We coordinate specialist partners, suppliers, logistics and operational planning for each host context.
+
+FEATURED PROJECT
+Eyebrow: FEATURED PROJECT
+Title: STRELLER presents PHARAONIKA
+Subtitle: A traveling Ancient Egypt cultural experience for European cities.
+Body: PHARAONIKA is being developed as a layered cultural destination rather than a conventional exhibition. The proposed experience combines an immersive Tutankhamun-inspired journey, replica displays, educational workshops, Egyptian crafts, family activities, a pharaonic photo studio, food, folklore and community programmes.
+Label: Proposed host format
+Facts:
+- 8–10 weeks per host city
+- Indicative footprint: 2,000+ m²
+- Designed for families, schools and cultural visitors
+CTA: Visit pharaonika.com
+
+WHY STRELLER
+1. Egyptian perspective — The project begins in Egypt and respects the cultural source of the story.
+2. One coherent experience — Storytelling, education, interaction and visual identity are designed as one visitor journey.
+3. Partner-ready model — A flexible framework that can respond to each city, venue and local audience.
+4. Impact by design — Education and social inclusion are built into the concept rather than added later.
+
+PARTNERSHIPS
+Heading: Built through the right partnerships.
+Intro: We welcome structured conversations with organisations that can strengthen quality, reach and local relevance.
+Host Cities & Venues: Venue access, permits, local coordination, cultural endorsement and media support.
+Sponsors: Financial, logistical, media or in-kind sponsorship linked to clear visibility and impact outcomes.
+Cultural & Educational Institutions: Content guidance, school networks, learning programmes and local cultural context.
+Hospitality, Logistics & Media Partners: Accommodation, transport, insurance, installation support, promotion and local communication.
+
+IMPACT
+Heading: Culture with a wider purpose.
+Label: Planned impact pillars
+Items:
+- School visits and educational workshops
+- Accessible visitor pathways
+- Supported or free community days when sponsorship allows
+- Programmes for care communities and older adults
+- Local NGO and community partnerships
+- Inclusive content for visitors with different needs
+
+ROADMAP
+1. Identity & digital foundation
+2. First host-city partnership
+3. Pilot edition
+4. Measure & improve
+5. European touring series
+
+VALUES
+Honesty / Professionalism / Cultural respect / Education / Inclusion / Transparent partnership
+
+CONTACT
+Heading: Let’s build the first chapter together.
+Body: We welcome conversations with host cities, venues, cultural institutions, sponsors and specialist partners.
+Fields: Full name, Organisation, Work email, Country or city, Inquiry type, Message, Consent.
+Inquiry types: Host City / Venue, Sponsorship, Cultural / Educational Partnership, Logistics / Hospitality, Media, General.
+Submit: Send inquiry
+Success: Thank you. Your inquiry has been received and our team will respond as soon as possible.
+
+FOOTER
+Egyptian cultural production company · Cairo, Egypt · Founded 2024.
+PHARAONIKA is a project in development.
+
+==================================================
+7. EXACT CONTENT — ARABIC
+==================================================
+
+HERO
+Eyebrow: إنتاج ثقافي مصري · القاهرة
+Headline: نبني جسورًا ثقافية بين مصر وأوروبا.
+Body: تطوّر شتريلا معارض متنقلة وتجارب ثقافية جماهيرية تحوّل التراث المصري إلى تعليم وتواصل وقيمة مستدامة للجمهور والمدن والشركاء.
+Status: تأسست في مايو 2024 · في مرحلة التطوير والإطلاق
+Primary CTA: شارك شتريلا
+Secondary CTA: استكشف فرعونيكا
+Small line: شتريلا تقدم فرعونيكا — أول مشروعاتنا الرئيسية الموجهة إلى أوروبا.
+
+TRUST STRIP
+انطلاقة من القاهرة / رؤية أوروبية / التعليم في القلب / تُبنى بالشراكات
+
+ABOUT
+Heading: شركة حديثة. رؤية واضحة. وخطة جادة.
+Paragraph 1: شتريلا شركة مصرية للإنتاج الثقافي تأسست في القاهرة في مايو 2024. نعمل على تطوير معارض متنقلة وتجارب جماهيرية تقدّم التراث المصري من خلال سرد معاصر وتعليم ومشاركة حقيقية.
+Paragraph 2: لا نقدّم تاريخًا طويلًا من المشروعات المنفذة، بل نقدّم شركة صريحة في مرحلة الإطلاق، تقوم على البحث والتخطيط المرحلي والالتزام بالعمل مع متخصصين في كل مرحلة.
+Quote: لا ينبغي أن تبقى الثقافة خلف الزجاج؛ بل يجب أن تتحرك وتعلّم وتدهش وتربط بين الناس.
+
+WHAT WE DO
+1. تطوير المعارض المتنقلة — نصوغ مفهوم المعرض ورحلة الزائر ونموذج الاستضافة من الفكرة الأولى.
+2. التجربة الثقافية والسينوغرافيا — ننسق السرد والتصميم المكاني والإضاءة والصوت واللحظات التفاعلية في تجربة واحدة.
+3. البرامج التعليمية — نطوّر زيارات مدرسية وورشًا تحوّل التراث إلى تعلم بالمشاركة.
+4. تخطيط شراكات المدن — نصمم نموذج التعاون مع البلديات والقاعات والرعاة والمؤسسات الثقافية.
+5. التفاعل الجماهيري والمجتمعي — نخطط مسارات للعائلات والمدارس والمجتمع والزوار ذوي احتياجات الوصول المختلفة.
+6. تنسيق التشغيل والمتخصصين — ننسق المتخصصين والموردين واللوجستيات وخطط التشغيل بما يناسب كل مدينة.
+
+FEATURED PROJECT
+Eyebrow: مشروعنا الرئيسي
+Title: شتريلا تقدم فرعونيكا
+Subtitle: تجربة ثقافية متنقلة عن مصر القديمة، مصممة للمدن الأوروبية.
+Body: يجري تطوير فرعونيكا كوجهة ثقافية متعددة الطبقات، لا كمعرض تقليدي. يجمع التصور المقترح بين رحلة غامرة مستوحاة من توت عنخ آمون، ومجسمات، وورش تعليمية، وحرف مصرية، وأنشطة عائلية، واستوديو تصوير فرعوني، وطعام وفلكلور وبرامج مجتمعية.
+Label: صيغة الاستضافة المقترحة
+Facts:
+- من 8 إلى 10 أسابيع لكل مدينة مستضيفة
+- مساحة تقديرية: 2,000 م² أو أكثر
+- مصمم للعائلات والمدارس والزوار المهتمين بالثقافة
+CTA: زيارة pharaonika.com
+
+WHY STRELLER
+1. منظور مصري — ينطلق المشروع من مصر ويحترم المصدر الثقافي للحكاية.
+2. تجربة واحدة متماسكة — يُصمم السرد والتعليم والتفاعل والهوية البصرية كرحلة واحدة للزائر.
+3. نموذج جاهز للشراكة — إطار مرن يستجيب لكل مدينة وقاعة وجمهور محلي.
+4. أثر مقصود منذ التصميم — التعليم والدمج الاجتماعي جزء من المفهوم، لا إضافة لاحقة.
+
+PARTNERSHIPS
+Heading: تُبنى المشروعات الكبيرة بالشراكات الصحيحة.
+Intro: نرحب بحوارات منظمة مع الجهات القادرة على رفع الجودة والوصول والملاءمة المحلية.
+Host Cities & Venues: القاعات والتصاريح والتنسيق المحلي والدعم الثقافي والإعلامي.
+Sponsors: رعاية مالية أو لوجستية أو إعلامية أو عينية، مرتبطة بظهور واضح وأثر قابل للقياس.
+Cultural & Educational Institutions: الإرشاد الثقافي وشبكات المدارس والبرامج التعليمية والسياق المحلي.
+Hospitality, Logistics & Media Partners: الإقامة والنقل والتأمين ودعم التركيب والترويج والتواصل المحلي.
+
+IMPACT
+Heading: ثقافة ذات غاية أوسع.
+Label: محاور الأثر المخطط لها
+Items:
+- زيارات مدرسية وورش تعليمية
+- مسارات وصول ميسرة
+- أيام مجتمعية مجانية أو مدعومة عند توفر الرعاية
+- برامج لدور الرعاية وكبار السن
+- تعاون مع الجمعيات والمجتمع المحلي
+- محتوى شامل للزوار ذوي الاحتياجات المختلفة
+
+ROADMAP
+1. تثبيت الهوية والأساس الرقمي
+2. شراكة أول مدينة مستضيفة
+3. تنفيذ النسخة التجريبية الأولى
+4. القياس والتحسين
+5. جولة أوروبية تدريجية
+
+VALUES
+الصدق / الاحتراف / احترام الثقافة / التعليم / الدمج / الشراكة الشفافة
+
+CONTACT
+Heading: لنكتب الفصل الأول معًا.
+Body: نرحب بالتواصل مع المدن والقاعات والمؤسسات الثقافية والرعاة والشركاء المتخصصين.
+Fields: الاسم الكامل، المؤسسة، بريد العمل، الدولة أو المدينة، نوع الاستفسار، الرسالة، الموافقة.
+Inquiry types: مدينة أو قاعة، رعاية، شراكة ثقافية أو تعليمية، لوجستيات أو ضيافة، إعلام، عام.
+Submit: إرسال الاستفسار
+Success: شكرًا لك. تم استلام استفسارك وسيتواصل معك فريقنا في أقرب وقت ممكن.
+
+FOOTER
+شركة مصرية للإنتاج الثقافي · القاهرة، مصر · تأسست 2024.
+فرعونيكا مشروع قيد التطوير.
+
+==================================================
+8. BILINGUAL ROUTING
+==================================================
+
+Create /en and /ar routes. Redirect / to /en unless the browser’s preferred language begins with ar. Provide a visible EN / العربية switch.
+
+Requirements:
+- set html lang and dir correctly
+- English is LTR; Arabic is RTL
+- localised metadata
+- content stored in typed locale objects, not duplicated in JSX
+- language switch should preserve the current section anchor when possible
+- do not show German/French/Dutch/Italian controls until those translations exist
+
+==================================================
+9. CONTACT FORM BACK END
+==================================================
+
+Create POST /api/contact.
+
+Use Zod validation. Fields:
+- name: 2–100 chars
+- organisation: 2–150 chars
+- email: valid email
+- location: optional, max 120 chars
+- inquiryType: enum
+- message: 20–3000 chars
+- consent: true
+- website: hidden honeypot; reject when filled
+
+Add a basic IP-based rate limit suitable for a single Replit instance. Store valid submissions in SQLite with createdAt, locale, userAgent and status. Never store raw IP addresses; hash or omit them.
+
+If RESEND_API_KEY and CONTACT_TO_EMAIL exist, send a notification. If they do not exist, saving to SQLite is enough and the UI must still return a real successful result.
+
+Add .env.example:
+SITE_URL=
+CONTACT_TO_EMAIL=
+RESEND_API_KEY=
+
+Do not hard-code a public email address until it is confirmed.
+
+==================================================
+10. ACCESSIBILITY
+==================================================
+
+Meet WCAG 2.2 AA:
+- one H1
+- semantic landmarks
+- skip link
+- 44x44 minimum interactive targets
+- visible keyboard focus
+- accessible mobile menu
+- form labels and associated errors
+- aria-live for submission state
+- keyboard support
+- alt text for all meaningful images
+- decorative canvas aria-hidden
+- colour contrast of at least 4.5:1 for normal text
+- prefers-reduced-motion support
+- true RTL layout, not just right alignment
+
+==================================================
+11. RESPONSIVE REQUIREMENTS
+==================================================
+
+Design mobile-first at 390px, then 768px and 1440px.
+
+Mobile:
+- 20px gutters
+- 100svh hero
+- copy in upper region and portrait mask in lower region
+- CTAs stack vertically
+- single-column sections
+- no horizontal overflow
+- contact form single column
+- accessible drawer navigation
+
+Desktop:
+- maximum content width around 1180px
+- 48px gutters
+- asymmetric editorial layouts
+- avoid repetitive equal-sized cards in every section
+- long text max-width 720px
+
+==================================================
+12. PERFORMANCE
+==================================================
+
+Targets:
+- Lighthouse mobile Performance >= 90
+- Accessibility >= 95
+- Best Practices >= 95
+- SEO >= 95
+- LCP < 2.5s under a reasonable mobile profile
+- CLS < 0.1
+
+Implementation:
+- preload only the hero image
+- WebP/AVIF with JPEG fallback if possible
+- lazy-load below-the-fold images
+- correct sizes attributes
+- load only required font weights
+- defer canvas initialization until after first paint
+- no heavy animation library
+- no autoplay video
+- minimise client-side JavaScript
+
+==================================================
+13. SEO
+==================================================
+
+English title: STRELLER — Egyptian Cultural Experiences for Europe
+English description: STRELLER is an Egyptian cultural-production company developing traveling exhibitions and cultural experiences for European cities, institutions and partners.
+
+Arabic title: شتريلا — تجارب ثقافية مصرية متنقلة لأوروبا
+Arabic description: شتريلا شركة مصرية للإنتاج الثقافي تطوّر معارض متنقلة وتجارب جماهيرية موجهة إلى المدن والمؤسسات والشركاء في أوروبا.
+
+Add:
+- canonical URL using SITE_URL
+- locale alternates
+- Open Graph metadata
+- Twitter card
+- sitemap
+- robots
+- Organization JSON-LD using verified facts only: name STRELLER, foundingDate 2024, addressLocality Cairo, country Egypt, URL from SITE_URL
+- no unverified social profiles
+
+==================================================
+14. ANALYTICS HOOKS
+==================================================
+
+Create a tiny analytics helper that is a no-op until a provider is configured. Define these events without sending personal data:
+- hero_partner_click
+- hero_pharaonika_click
+- nav_section_click
+- project_external_click
+- contact_form_start
+- contact_form_submit_success
+- contact_form_submit_error
+- language_switch
+
+Do not install an analytics service without configuration and consent support.
+
+==================================================
+15. QA AND DELIVERY
+==================================================
+
+Add scripts:
+- npm run lint
+- npm run typecheck
+- npm run build
+- npm run test:e2e
+
+Use Playwright to test:
+- English and Arabic routes load
+- language switch works
+- mobile menu works by keyboard
+- external PHARAONIKA link is correct and secure
+- contact validation works
+- contact success path works
+- no horizontal overflow at 390px
+
+Capture screenshots at:
+- 390x844 English hero and full page
+- 390x844 Arabic hero and full page
+- 1440x900 English hero and full page
+- 1440x900 Arabic hero and full page
+
+Inspect the screenshots visually. Fix every overlap, overflow, cramped area, weak contrast or broken RTL issue before considering the task complete.
+
+Create a concise README.md containing:
+- architecture
+- setup commands
+- environment variables
+- how to replace images
+- how to update copy and locales
+- how to change PHARAONIKA spelling globally
+- how to view saved contact inquiries
+- deployment steps for Replit
+
+Before final delivery, run lint, typecheck, build and tests. Do not claim success if any command fails.
+
+At the end, report:
+1. what you built
+2. the final file structure
+3. commands run and their results
+4. required environment variables
+5. any unverified content that still needs owner confirmation
+6. the Replit preview URL
