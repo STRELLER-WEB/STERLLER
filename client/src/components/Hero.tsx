@@ -40,7 +40,10 @@ export function Hero() {
     <section className="relative isolate flex min-h-[100svh] flex-col overflow-hidden bg-navy-deep">
       {/* Layer 1 — responsive art-directed background */}
       <div ref={parallaxRef} className="absolute -inset-3 scale-[1.02]">
-        <picture>
+        {/* In RTL the copy sits on the right, so mirror the artwork to move
+            the mask to the left and keep it out from under the text. */}
+        <div className="h-full w-full rtl:-scale-x-100">
+          <picture>
           <source media="(max-width: 767px)" srcSet="/assets/hero-portrait.webp" type="image/webp" />
           <source media="(max-width: 767px)" srcSet="/assets/hero-portrait.jpg" />
           <source srcSet="/assets/hero-wide.webp" type="image/webp" />
@@ -51,7 +54,8 @@ export function Hero() {
             fetchPriority="high"
             className={`h-full w-full object-cover object-[70%_80%] md:object-[75%_center] ${reducedMotion ? "" : "kenburns"}`}
           />
-        </picture>
+          </picture>
+        </div>
       </div>
 
       {/* Layer 2 — readability gradients */}
