@@ -3,6 +3,7 @@ import http from "node:http";
 import fs from "node:fs";
 import path from "node:path";
 import { contactRouter } from "./contact";
+import { startRetentionSchedule } from "./db";
 import { detectLocale, isLocale, renderMeta, renderRobots, renderSitemap } from "./meta";
 
 const app = express();
@@ -15,6 +16,9 @@ app.set("trust proxy", 1);
 app.use(express.json({ limit: "64kb" }));
 
 app.use("/api/contact", contactRouter);
+
+// Enforce the retention period promised in the published privacy policy.
+startRetentionSchedule();
 
 app.get("/sitemap.xml", (_req, res) => {
   res.type("application/xml").send(renderSitemap());

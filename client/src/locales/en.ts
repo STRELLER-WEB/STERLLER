@@ -195,7 +195,8 @@ export const en: SiteContent = {
       inquiryType: "Inquiry type",
       message: "Message",
       consent:
-        "I agree that STRELLER may store this inquiry and contact me about it.",
+        "I agree that STRELLER may store this inquiry and contact me about it, as described in the {privacyPolicy}.",
+      consentPrivacyLabel: "Privacy Policy",
     },
     inquiryOptions: {
       host_city_venue: "Host City / Venue",
@@ -224,5 +225,70 @@ export const en: SiteContent = {
   footer: {
     line1: "Egyptian cultural production company · Cairo, Egypt · Founded 2024.",
     line2: `${P} is a project in development.`,
+    privacyLink: "Privacy Policy",
+  },
+  privacy: {
+    title: "Privacy Policy",
+    lastUpdated: "Last updated: 8 August 2026",
+    backToHome: "Back to home",
+    intro:
+      "This policy explains how STRELLER handles personal data submitted through this website, in line with the EU General Data Protection Regulation (GDPR).",
+    sections: [
+      {
+        title: "1. Who we are",
+        body: [
+          "STRELLER is an Egyptian cultural-production company founded in Cairo in 2024. For personal data submitted through this website, STRELLER acts as the data controller.",
+          "You can reach us at any time through the contact form on this website.",
+        ],
+      },
+      {
+        title: "2. What data we collect",
+        body: [
+          "When you send a partnership inquiry, we collect the information you provide in the form: your full name, organisation, work email address, country or city (optional), the type of inquiry, your message and the language you used.",
+          "Like most websites, our hosting infrastructure also processes basic technical data (such as IP addresses) in server logs for security and operational purposes.",
+        ],
+      },
+      {
+        title: "3. Why we use your data and on what legal basis",
+        body: [
+          "We use the data you submit solely to review your inquiry, respond to you and conduct the partnership conversation you requested.",
+          "The legal bases are your consent (Art. 6(1)(a) GDPR), which you give via the checkbox in the form, and steps taken at your request prior to entering into a possible agreement (Art. 6(1)(b) GDPR).",
+          "We do not use your data for advertising, profiling or automated decision-making.",
+        ],
+      },
+      {
+        title: "4. How long we keep your data",
+        body: [
+          "Inquiries submitted through this form are automatically deleted from our systems 24 months after they are received. If a partnership conversation continues beyond the form submission, it does so by email, and that correspondence is handled as part of the ongoing partnership.",
+        ],
+      },
+      {
+        title: "5. Who we share your data with",
+        body: [
+          "We never sell your data. We share it only with service providers that are technically necessary to operate this website and deliver messages — for example our hosting provider and, where configured, an email delivery service that notifies our team of new inquiries.",
+          "Where such providers process data outside the European Economic Area, we rely on appropriate safeguards such as the EU Standard Contractual Clauses.",
+        ],
+      },
+      {
+        title: "6. Cookies and analytics",
+        body: [
+          "This website does not use advertising cookies or third-party tracking. Only technically necessary processing takes place to deliver the site to your browser.",
+        ],
+      },
+      {
+        title: "7. Your rights",
+        body: [
+          "Under the GDPR you have the right to access, rectify or erase your personal data, to restrict or object to its processing, and to data portability.",
+          "You may withdraw your consent at any time with effect for the future — simply contact us via the form on this website.",
+          "You also have the right to lodge a complaint with a data-protection supervisory authority, in particular in the EU member state of your residence or workplace.",
+        ],
+      },
+      {
+        title: "8. Changes to this policy",
+        body: [
+          "We may update this policy as the project develops. The current version, with its date, is always published on this page.",
+        ],
+      },
+    ],
   },
 };

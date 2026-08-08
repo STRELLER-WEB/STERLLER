@@ -2,7 +2,7 @@ import { useLocale } from "@/lib/i18n";
 import { siteConfig } from "@/lib/site-config";
 
 export function Footer() {
-  const { t } = useLocale();
+  const { t, locale } = useLocale();
   return (
     <footer className="bg-navy-deep py-12 text-papyrus/80">
       <div className="container-site">
@@ -22,8 +22,16 @@ export function Footer() {
             <span className="sr-only"> ({t.a11y.externalNewTab})</span>
           </a>
         </div>
-        <div className="mt-8 border-t border-gold/15 pt-6 text-xs text-papyrus/50">
-          © {new Date().getFullYear()} {siteConfig.companyName}
+        <div className="mt-8 flex flex-col gap-2 border-t border-gold/15 pt-6 text-xs text-papyrus/50 sm:flex-row sm:items-center sm:justify-between">
+          <span>
+            © {new Date().getFullYear()} {siteConfig.companyName}
+          </span>
+          <a
+            href={`/${locale}/privacy`}
+            className="min-h-[44px] text-xs font-semibold text-papyrus/70 underline-offset-4 hover:underline sm:flex sm:items-center"
+          >
+            {t.footer.privacyLink}
+          </a>
         </div>
       </div>
     </footer>

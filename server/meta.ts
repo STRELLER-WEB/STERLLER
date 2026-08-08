@@ -149,12 +149,16 @@ export function renderMeta(template: string, locale: Locale): string {
 export function renderSitemap(): string {
   const siteUrl = getSiteUrl();
   const urls = locales
-    .map(
-      (l) => `  <url>
+    .flatMap((l) => [
+      `  <url>
     <loc>${siteUrl}/${l}</loc>
 ${locales.map((alt) => `    <xhtml:link rel="alternate" hreflang="${alt}" href="${siteUrl}/${alt}" />`).join("\n")}
   </url>`,
-    )
+      `  <url>
+    <loc>${siteUrl}/${l}/privacy</loc>
+${locales.map((alt) => `    <xhtml:link rel="alternate" hreflang="${alt}" href="${siteUrl}/${alt}/privacy" />`).join("\n")}
+  </url>`,
+    ])
     .join("\n");
   return `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">

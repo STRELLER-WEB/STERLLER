@@ -200,7 +200,8 @@ export const de: SiteContent = {
       inquiryType: "Art der Anfrage",
       message: "Nachricht",
       consent:
-        "Ich bin einverstanden, dass STRELLER diese Anfrage speichert und mich dazu kontaktiert.",
+        "Ich bin einverstanden, dass STRELLER diese Anfrage speichert und mich dazu kontaktiert, wie in der {privacyPolicy} beschrieben.",
+      consentPrivacyLabel: "Datenschutzerklärung",
     },
     inquiryOptions: {
       host_city_venue: "Gaststadt / Veranstaltungsort",
@@ -229,5 +230,70 @@ export const de: SiteContent = {
   footer: {
     line1: "Ägyptisches Kulturproduktionsunternehmen · Kairo, Ägypten · Gegründet 2024.",
     line2: `${P} ist ein Projekt in Entwicklung.`,
+    privacyLink: "Datenschutzerklärung",
+  },
+  privacy: {
+    title: "Datenschutzerklärung",
+    lastUpdated: "Zuletzt aktualisiert: 8. August 2026",
+    backToHome: "Zurück zur Startseite",
+    intro:
+      "Diese Erklärung beschreibt, wie STRELLER personenbezogene Daten verarbeitet, die über diese Website übermittelt werden — im Einklang mit der EU-Datenschutz-Grundverordnung (DSGVO).",
+    sections: [
+      {
+        title: "1. Wer wir sind",
+        body: [
+          "STRELLER ist ein ägyptisches Kulturproduktionsunternehmen, gegründet 2024 in Kairo. Für personenbezogene Daten, die über diese Website übermittelt werden, ist STRELLER der Verantwortliche im Sinne der DSGVO.",
+          "Sie erreichen uns jederzeit über das Kontaktformular auf dieser Website.",
+        ],
+      },
+      {
+        title: "2. Welche Daten wir erheben",
+        body: [
+          "Wenn Sie eine Partnerschaftsanfrage senden, erheben wir die Angaben aus dem Formular: Ihren vollständigen Namen, Ihre Organisation, Ihre geschäftliche E-Mail-Adresse, Land oder Stadt (optional), die Art der Anfrage, Ihre Nachricht und die verwendete Sprache.",
+          "Wie bei den meisten Websites verarbeitet unsere Hosting-Infrastruktur zudem grundlegende technische Daten (z. B. IP-Adressen) in Server-Logs zu Sicherheits- und Betriebszwecken.",
+        ],
+      },
+      {
+        title: "3. Zweck und Rechtsgrundlage der Verarbeitung",
+        body: [
+          "Wir verwenden die übermittelten Daten ausschließlich, um Ihre Anfrage zu prüfen, Ihnen zu antworten und das von Ihnen gewünschte Partnerschaftsgespräch zu führen.",
+          "Rechtsgrundlagen sind Ihre Einwilligung (Art. 6 Abs. 1 lit. a DSGVO), die Sie über die Checkbox im Formular erteilen, sowie vorvertragliche Maßnahmen auf Ihre Anfrage (Art. 6 Abs. 1 lit. b DSGVO).",
+          "Wir nutzen Ihre Daten nicht für Werbung, Profiling oder automatisierte Entscheidungsfindung.",
+        ],
+      },
+      {
+        title: "4. Speicherdauer",
+        body: [
+          "Über dieses Formular übermittelte Anfragen werden 24 Monate nach ihrem Eingang automatisch aus unseren Systemen gelöscht. Wird das Partnerschaftsgespräch über die Formularanfrage hinaus fortgesetzt, geschieht dies per E-Mail; diese Korrespondenz wird im Rahmen der laufenden Partnerschaft geführt.",
+        ],
+      },
+      {
+        title: "5. Weitergabe von Daten",
+        body: [
+          "Wir verkaufen Ihre Daten niemals. Wir geben sie nur an Dienstleister weiter, die für den Betrieb dieser Website und die Zustellung von Nachrichten technisch erforderlich sind — etwa unseren Hosting-Anbieter und, sofern eingerichtet, einen E-Mail-Dienst, der unser Team über neue Anfragen benachrichtigt.",
+          "Soweit solche Dienstleister Daten außerhalb des Europäischen Wirtschaftsraums verarbeiten, stützen wir uns auf geeignete Garantien wie die EU-Standardvertragsklauseln.",
+        ],
+      },
+      {
+        title: "6. Cookies und Analyse",
+        body: [
+          "Diese Website verwendet keine Werbe-Cookies und kein Tracking durch Dritte. Es findet ausschließlich technisch notwendige Verarbeitung statt, um die Website in Ihrem Browser bereitzustellen.",
+        ],
+      },
+      {
+        title: "7. Ihre Rechte",
+        body: [
+          "Nach der DSGVO haben Sie das Recht auf Auskunft, Berichtigung und Löschung Ihrer personenbezogenen Daten, auf Einschränkung der Verarbeitung, Widerspruch sowie auf Datenübertragbarkeit.",
+          "Sie können Ihre Einwilligung jederzeit mit Wirkung für die Zukunft widerrufen — kontaktieren Sie uns dazu einfach über das Formular auf dieser Website.",
+          "Außerdem haben Sie das Recht, sich bei einer Datenschutz-Aufsichtsbehörde zu beschweren, insbesondere in dem EU-Mitgliedstaat Ihres Wohn- oder Arbeitsorts.",
+        ],
+      },
+      {
+        title: "8. Änderungen dieser Erklärung",
+        body: [
+          "Wir können diese Erklärung im Zuge der Projektentwicklung aktualisieren. Die jeweils aktuelle Fassung mit Datum ist stets auf dieser Seite veröffentlicht.",
+        ],
+      },
+    ],
   },
 };

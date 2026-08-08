@@ -97,7 +97,10 @@ export interface SiteContent {
       locationOptional: string;
       inquiryType: string;
       message: string;
+      /** Consent sentence containing the `{privacyPolicy}` placeholder for the link. */
       consent: string;
+      /** Link text substituted into the consent sentence. */
+      consentPrivacyLabel: string;
     };
     inquiryOptions: Record<InquiryType, string>;
     selectPlaceholder: string;
@@ -118,5 +121,13 @@ export interface SiteContent {
   footer: {
     line1: string;
     line2: string;
+    privacyLink: string;
+  };
+  privacy: {
+    title: string;
+    lastUpdated: string;
+    backToHome: string;
+    intro: string;
+    sections: { title: string; body: string[] }[];
   };
 }

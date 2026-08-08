@@ -200,7 +200,8 @@ export const fr: SiteContent = {
       inquiryType: "Type de demande",
       message: "Message",
       consent:
-        "J'accepte que STRELLER conserve cette demande et me contacte à son sujet.",
+        "J'accepte que STRELLER conserve cette demande et me contacte à son sujet, comme décrit dans la {privacyPolicy}.",
+      consentPrivacyLabel: "Politique de confidentialité",
     },
     inquiryOptions: {
       host_city_venue: "Ville hôte / Lieu",
@@ -229,5 +230,70 @@ export const fr: SiteContent = {
   footer: {
     line1: "Société égyptienne de production culturelle · Le Caire, Égypte · Fondée en 2024.",
     line2: `${P} est un projet en développement.`,
+    privacyLink: "Politique de confidentialité",
+  },
+  privacy: {
+    title: "Politique de confidentialité",
+    lastUpdated: "Dernière mise à jour : 8 août 2026",
+    backToHome: "Retour à l'accueil",
+    intro:
+      "Cette politique explique comment STRELLER traite les données personnelles transmises via ce site web, conformément au Règlement général sur la protection des données de l'UE (RGPD).",
+    sections: [
+      {
+        title: "1. Qui nous sommes",
+        body: [
+          "STRELLER est une société égyptienne de production culturelle fondée au Caire en 2024. Pour les données personnelles transmises via ce site web, STRELLER agit en qualité de responsable du traitement.",
+          "Vous pouvez nous joindre à tout moment via le formulaire de contact de ce site.",
+        ],
+      },
+      {
+        title: "2. Les données que nous collectons",
+        body: [
+          "Lorsque vous envoyez une demande de partenariat, nous collectons les informations fournies dans le formulaire : votre nom complet, votre organisation, votre e-mail professionnel, votre pays ou ville (facultatif), le type de demande, votre message et la langue utilisée.",
+          "Comme la plupart des sites web, notre infrastructure d'hébergement traite également des données techniques de base (telles que les adresses IP) dans les journaux du serveur, à des fins de sécurité et d'exploitation.",
+        ],
+      },
+      {
+        title: "3. Finalités et base juridique du traitement",
+        body: [
+          "Nous utilisons les données transmises uniquement pour examiner votre demande, vous répondre et mener la discussion de partenariat que vous avez sollicitée.",
+          "Les bases juridiques sont votre consentement (art. 6, § 1, a du RGPD), donné via la case à cocher du formulaire, ainsi que les mesures précontractuelles prises à votre demande (art. 6, § 1, b du RGPD).",
+          "Nous n'utilisons pas vos données à des fins publicitaires, de profilage ou de décision automatisée.",
+        ],
+      },
+      {
+        title: "4. Durée de conservation",
+        body: [
+          "Les demandes envoyées via ce formulaire sont automatiquement supprimées de nos systèmes 24 mois après leur réception. Si la discussion de partenariat se poursuit au-delà de l'envoi du formulaire, elle se déroule par e-mail, et cette correspondance est gérée dans le cadre du partenariat en cours.",
+        ],
+      },
+      {
+        title: "5. Partage des données",
+        body: [
+          "Nous ne vendons jamais vos données. Nous les partageons uniquement avec les prestataires techniquement nécessaires au fonctionnement de ce site et à l'acheminement des messages — par exemple notre hébergeur et, le cas échéant, un service d'envoi d'e-mails qui notifie notre équipe des nouvelles demandes.",
+          "Lorsque ces prestataires traitent des données en dehors de l'Espace économique européen, nous nous appuyons sur des garanties appropriées telles que les clauses contractuelles types de l'UE.",
+        ],
+      },
+      {
+        title: "6. Cookies et mesure d'audience",
+        body: [
+          "Ce site n'utilise ni cookies publicitaires ni traceurs tiers. Seuls des traitements techniquement nécessaires sont effectués pour afficher le site dans votre navigateur.",
+        ],
+      },
+      {
+        title: "7. Vos droits",
+        body: [
+          "En vertu du RGPD, vous disposez d'un droit d'accès, de rectification et d'effacement de vos données personnelles, ainsi que d'un droit à la limitation du traitement, d'opposition et à la portabilité des données.",
+          "Vous pouvez retirer votre consentement à tout moment, avec effet pour l'avenir — il vous suffit de nous contacter via le formulaire de ce site.",
+          "Vous avez également le droit d'introduire une réclamation auprès d'une autorité de contrôle de la protection des données, notamment dans l'État membre de l'UE de votre résidence ou de votre lieu de travail.",
+        ],
+      },
+      {
+        title: "8. Modifications de cette politique",
+        body: [
+          "Nous pouvons mettre à jour cette politique au fil du développement du projet. La version en vigueur, avec sa date, est toujours publiée sur cette page.",
+        ],
+      },
+    ],
   },
 };

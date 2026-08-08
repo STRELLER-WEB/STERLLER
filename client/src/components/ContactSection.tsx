@@ -105,6 +105,10 @@ export function ContactSection() {
     }
   }
 
+  // The consent sentence contains a {privacyPolicy} placeholder so each
+  // locale controls where the link sits grammatically.
+  const [consentBefore, consentAfter = ""] = t.contact.fields.consent.split("{privacyPolicy}");
+
   const inputClass =
     "w-full rounded-[10px] border border-lapis/25 bg-paper px-4 py-3 text-base text-charcoal placeholder:text-muted focus:border-turquoise-deep";
   const labelClass = "mb-1.5 block text-sm font-semibold text-lapis";
@@ -307,7 +311,17 @@ export function ContactSection() {
                         aria-describedby={errors.consent ? "cf-consent-error" : undefined}
                       />
                       <span className="text-sm leading-relaxed text-charcoal/90">
-                        {t.contact.fields.consent}
+                        {consentBefore}
+                        <a
+                          href={`/${locale}/privacy`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="font-semibold text-turquoise-deep underline underline-offset-2"
+                        >
+                          {t.contact.fields.consentPrivacyLabel}
+                          <span className="sr-only"> ({t.a11y.externalNewTab})</span>
+                        </a>
+                        {consentAfter}
                       </span>
                     </label>
                     {errors.consent && (

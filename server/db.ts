@@ -47,3 +47,26 @@ export function saveInquiry(record: InquiryRecord): number {
   });
   return Number(result.lastInsertRowid);
 }
+
+/**
+ * GDPR retention: the published privacy policy promises inquiry data is
+ * deleted within 24 months. Enforce it here — runs at startup and daily.
+ */
+const RETENTION_MONTHS = 24;
+const deleteExpiredStmt = db.prepare(`DELETE FROM inquiries WHERE created_at < ?`);
+
+export function purgeExpiredInquiries(): number {
+  const cutoff = new Date();
+  cutoff.setMonth(cutoff.getMonth() - RETENTION_MONTHS);
+  const result = deleteExpiredStmt.run(cutoff.toISOString());
+  if (result.changes > 0) {
+    console.log(`Retention: deleted ${result.changes} inquiries older than ${RETENTION_MONTHS} months.`);
+  }
+  return result.changes;
+}
+
+export function startRetentionSchedule(): void {
+  purgeExpiredInquiries();
+  const timer = setInterval(purgeExpiredInquiries, 24 * 60 * 60 * 1000);
+  timer.unref();
+}
