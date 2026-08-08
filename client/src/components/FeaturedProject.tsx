@@ -65,7 +65,7 @@ export function FeaturedProject() {
                     loading="lazy"
                     width="1024"
                     height="438"
-                    className="h-full w-full object-cover"
+                    className="h-full w-full object-cover pt-[50px] pb-[50px]"
                   />
                 </picture>
               </div>

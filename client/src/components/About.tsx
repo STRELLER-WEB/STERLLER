@@ -32,7 +32,7 @@ export function About() {
                     loading="lazy"
                     width="1024"
                     height="559"
-                    className="h-full w-full object-cover"
+                    className="h-full w-full object-cover pt-[100px] pb-[100px]"
                   />
                 </picture>
               </div>
