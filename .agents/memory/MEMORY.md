@@ -1,0 +1,2 @@
+- [RTL off-screen hiding pitfall](rtl-offscreen-hiding.md) — never hide via `-left-9999px` on RTL sites; left overflow is scrollable in RTL and blanks the page. Use clip-based sr-only CSS.
+- [Env package pins](env-package-pins.md) — `tsx` pinned to 4.20.5; newer releases are blocked by the workspace firewall.
