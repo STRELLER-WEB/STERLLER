@@ -2,6 +2,7 @@ import { useLocale } from "@/lib/i18n";
 import { siteConfig } from "@/lib/site-config";
 import { track } from "@/lib/analytics";
 import { Reveal } from "./Reveal";
+import { CountUpText } from "./CountUpText";
 
 export function FeaturedProject() {
   const { t } = useLocale();
@@ -26,7 +27,7 @@ export function FeaturedProject() {
                 {t.project.facts.map((fact) => (
                   <li key={fact} className="flex items-start gap-3 text-sm text-papyrus/95 md:text-base">
                     <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-gold" aria-hidden="true" />
-                    {fact}
+                    <CountUpText text={fact} />
                   </li>
                 ))}
               </ul>
@@ -55,7 +56,7 @@ export function FeaturedProject() {
 
           <Reveal delay={120}>
             <figure>
-              <div className="overflow-hidden rounded-xl border border-gold/25">
+              <div className="img-zoom overflow-hidden rounded-xl border border-gold/25">
                 <picture>
                   <source srcSet="/assets/temple-corridor.webp" type="image/webp" />
                   <img

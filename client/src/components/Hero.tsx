@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, type CSSProperties } from "react";
 import { useLocale } from "@/lib/i18n";
 import { usePrefersReducedMotion } from "@/lib/motion";
 import { siteConfig } from "@/lib/site-config";
@@ -6,6 +6,11 @@ import { track } from "@/lib/analytics";
 import { GoldenDustCanvas } from "./GoldenDustCanvas";
 
 const PARALLAX_MAX = 8;
+
+/** Staggered entrance delay for the hero choreography. */
+function heroDelay(ms: number): CSSProperties {
+  return { "--hero-delay": `${ms}ms` } as CSSProperties;
+}
 
 export function Hero() {
   const { t } = useLocale();
@@ -39,7 +44,7 @@ export function Hero() {
   return (
     <section className="relative isolate flex min-h-[100svh] flex-col overflow-hidden bg-navy-deep">
       {/* Layer 1 — responsive art-directed background */}
-      <div ref={parallaxRef} className="absolute -inset-3 scale-[1.02]">
+      <div ref={parallaxRef} className="hero-bg-enter absolute -inset-3 scale-[1.02]">
         {/* In RTL the copy sits on the right, so mirror the artwork to move
             the mask to the left and keep it out from under the text. */}
         <div className="h-full w-full rtl:-scale-x-100">
@@ -74,16 +79,29 @@ export function Hero() {
       {/* Copy */}
       <div className="container-site relative z-10 flex flex-1 flex-col justify-start pb-24 pt-32 md:justify-center md:py-40">
         <div className="max-w-[620px]">
-          <p className="eyebrow text-gold">{t.hero.eyebrow}</p>
-          <h1 className="font-display mt-5 text-4xl font-bold leading-[1.15] text-paper md:text-6xl md:leading-[1.1]">
+          <p className="eyebrow hero-item text-gold" style={heroDelay(80)}>
+            {t.hero.eyebrow}
+          </p>
+          <h1
+            className="font-display hero-item mt-5 text-4xl font-bold leading-[1.15] text-paper md:text-6xl md:leading-[1.1]"
+            style={heroDelay(220)}
+          >
             {t.hero.headline}
           </h1>
-          <p className="mt-6 max-w-[540px] text-base leading-relaxed text-papyrus/90 md:text-lg">
+          <p
+            className="hero-item mt-6 max-w-[540px] text-base leading-relaxed text-papyrus/90 md:text-lg"
+            style={heroDelay(420)}
+          >
             {t.hero.body}
           </p>
-          <p className="mt-5 text-sm font-medium text-gold-soft/90">{t.hero.status}</p>
+          <p className="hero-item mt-5 text-sm font-medium text-gold-soft/90" style={heroDelay(540)}>
+            {t.hero.status}
+          </p>
 
-          <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
+          <div
+            className="hero-item mt-8 flex flex-col gap-3 sm:flex-row sm:items-center"
+            style={heroDelay(640)}
+          >
             <a
               href="#contact"
               className="btn-primary"
@@ -103,7 +121,10 @@ export function Hero() {
             </a>
           </div>
 
-          <p className="mt-8 flex items-center gap-3 text-sm text-papyrus/75">
+          <p
+            className="hero-item mt-8 flex items-center gap-3 text-sm text-papyrus/75"
+            style={heroDelay(820)}
+          >
             <span className="gold-rule shrink-0" aria-hidden="true" />
             {t.hero.smallLine}
           </p>

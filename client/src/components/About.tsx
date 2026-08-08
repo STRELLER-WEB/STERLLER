@@ -23,7 +23,7 @@ export function About() {
           </Reveal>
           <Reveal delay={120}>
             <figure>
-              <div className="overflow-hidden rounded-xl border border-gold/30">
+              <div className="img-zoom overflow-hidden rounded-xl border border-gold/30">
                 <picture>
                   <source srcSet="/assets/artisan-papyrus.webp" type="image/webp" />
                   <img

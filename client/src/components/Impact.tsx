@@ -17,24 +17,22 @@ export function Impact() {
               {t.impact.label}
             </p>
           </Reveal>
-          <Reveal delay={100}>
-            <ul className="grid gap-x-10 gap-y-5 sm:grid-cols-2">
-              {t.impact.items.map((item) => (
-                <li key={item} className="flex items-start gap-3 leading-relaxed text-papyrus/95">
-                  <svg
-                    className="mt-1.5 shrink-0 text-gold"
-                    width="14"
-                    height="14"
-                    viewBox="0 0 14 14"
-                    fill="none"
-                    aria-hidden="true"
-                  >
-                    <path d="M2 7.5L5.5 11L12 3.5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
-                  </svg>
-                  {item}
-                </li>
-              ))}
-            </ul>
+          <Reveal as="ul" stagger className="grid gap-x-10 gap-y-5 sm:grid-cols-2">
+            {t.impact.items.map((item) => (
+              <li key={item} className="flex items-start gap-3 leading-relaxed text-papyrus/95">
+                <svg
+                  className="mt-1.5 shrink-0 text-gold"
+                  width="14"
+                  height="14"
+                  viewBox="0 0 14 14"
+                  fill="none"
+                  aria-hidden="true"
+                >
+                  <path d="M2 7.5L5.5 11L12 3.5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+                {item}
+              </li>
+            ))}
           </Reveal>
         </div>
       </div>

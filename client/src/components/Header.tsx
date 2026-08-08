@@ -104,7 +104,7 @@ export function Header() {
               key={item.href}
               href={item.href}
               onClick={() => track("nav_section_click", { section: item.label })}
-              className="flex min-h-[44px] items-center text-sm font-medium text-papyrus/90 transition-colors hover:text-gold-soft"
+              className="nav-link flex min-h-[44px] items-center text-sm font-medium text-papyrus/90 transition-colors hover:text-gold-soft"
             >
               {item.label}
             </a>
@@ -144,11 +144,11 @@ export function Header() {
       {/* Mobile drawer */}
       {open && (
         <div className="fixed inset-0 top-16 z-40 lg:hidden" role="presentation" onClick={close}>
-          <div className="absolute inset-0 bg-navy-deep/60" aria-hidden="true" />
+          <div className="drawer-scrim absolute inset-0 bg-navy-deep/60" aria-hidden="true" />
           <div
             ref={drawerRef}
             id="mobile-drawer"
-            className="relative max-h-[calc(100dvh-4rem)] overflow-y-auto border-b border-gold/20 bg-navy-deep px-5 pb-8 pt-4"
+            className="drawer-panel relative max-h-[calc(100dvh-4rem)] overflow-y-auto border-b border-gold/20 bg-navy-deep px-5 pb-8 pt-4"
             onClick={(event) => event.stopPropagation()}
           >
             <nav aria-label="Main" className="flex flex-col">

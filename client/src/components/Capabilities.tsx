@@ -15,9 +15,17 @@ export function Capabilities() {
         </Reveal>
         <ol className="mt-12 grid gap-x-16 gap-y-10 md:grid-cols-2">
           {t.capabilities.items.map((item, index) => (
-            <Reveal as="li" key={item.title} delay={(index % 2) * 100} className="border-t border-lapis/15 pt-6">
+            <Reveal
+              as="li"
+              key={item.title}
+              delay={(index % 2) * 100}
+              className="group border-t border-lapis/15 pt-6 transition-colors duration-300 hover:border-gold/60"
+            >
               <div className="flex items-baseline gap-4">
-                <span className="font-display text-lg font-semibold text-gold-deep" aria-hidden="true">
+                <span
+                  className="font-display text-lg font-semibold text-gold-deep transition-colors duration-300 group-hover:text-gold"
+                  aria-hidden="true"
+                >
                   {String(index + 1).padStart(2, "0")}
                 </span>
                 <div>

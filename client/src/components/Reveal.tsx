@@ -4,12 +4,14 @@ interface RevealProps {
   children: ReactNode;
   className?: string;
   delay?: number;
-  as?: "div" | "li";
+  as?: "div" | "li" | "ul" | "ol";
+  /** Sequence direct children with a shared stagger instead of moving the block as one. */
+  stagger?: boolean;
 }
 
 /** IntersectionObserver-driven reveal; a no-op under prefers-reduced-motion. */
-export function Reveal({ children, className, delay, as = "div" }: RevealProps) {
-  const ref = useRef<HTMLDivElement & HTMLLIElement>(null);
+export function Reveal({ children, className, delay, as = "div", stagger }: RevealProps) {
+  const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const el = ref.current;
@@ -33,11 +35,12 @@ export function Reveal({ children, className, delay, as = "div" }: RevealProps) 
     return () => observer.disconnect();
   }, []);
 
-  const Tag = as;
+  // The tags we render share the same ref/prop surface; cast keeps typing simple.
+  const Tag = as as "div";
   return (
     <Tag
       ref={ref}
-      className={`reveal ${className ?? ""}`}
+      className={`${stagger ? "reveal-stagger" : "reveal"} ${className ?? ""}`}
       style={delay ? { transitionDelay: `${delay}ms` } : undefined}
     >
       {children}

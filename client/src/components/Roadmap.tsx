@@ -22,7 +22,7 @@ export function Roadmap() {
               className="relative border-s-2 border-gold/40 ps-5 md:border-s-0 md:border-t-2 md:ps-0 md:pt-5"
             >
               <span
-                className="absolute -start-[7px] top-0 h-3 w-3 rounded-full border-2 border-gold bg-paper md:-top-[7px] md:start-0"
+                className="roadmap-dot absolute -start-[7px] top-0 h-3 w-3 rounded-full border-2 border-gold bg-paper md:-top-[7px] md:start-0"
                 aria-hidden="true"
               />
               <span className="font-display text-sm font-semibold text-gold-deep" aria-hidden="true">

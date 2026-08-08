@@ -110,7 +110,7 @@ export function ContactSection() {
   const [consentBefore, consentAfter = ""] = t.contact.fields.consent.split("{privacyPolicy}");
 
   const inputClass =
-    "w-full rounded-[10px] border border-lapis/25 bg-paper px-4 py-3 text-base text-charcoal placeholder:text-muted focus:border-turquoise-deep";
+    "w-full rounded-[10px] border border-lapis/25 bg-paper px-4 py-3 text-base text-charcoal placeholder:text-muted transition-[border-color,box-shadow] duration-200 focus:border-turquoise-deep focus:shadow-[0_0_0_3px_rgba(46,111,119,0.14)]";
   const labelClass = "mb-1.5 block text-sm font-semibold text-lapis";
   const errorClass = "mt-1.5 text-sm font-medium text-terracotta";
 
