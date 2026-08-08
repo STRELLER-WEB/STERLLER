@@ -19,9 +19,10 @@
   html[lang="ar"] .font-display {
     font-family: Cairo, "Segoe UI", Tahoma, Arial, sans-serif;
   }
-  /* Letter-spacing damages Arabic script. */
-  html[lang="ar"] .eyebrow {
-    letter-spacing: 0;
+  /* Letter-spacing damages Arabic script — remove it everywhere, including
+     tracked eyebrows, captions and badges. */
+  html[lang="ar"] * {
+    letter-spacing: 0 !important;
   }
 
   section[id] {

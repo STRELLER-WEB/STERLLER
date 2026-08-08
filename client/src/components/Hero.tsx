@@ -57,7 +57,7 @@ export function Hero() {
       {/* Layer 2 — readability gradients */}
       <div
         aria-hidden="true"
-        className="absolute inset-0 bg-gradient-to-b from-navy-deep/80 via-navy-deep/35 to-navy-deep/85 md:bg-gradient-to-r md:from-navy-deep/90 md:via-navy-deep/60 md:to-navy-deep/10"
+        className="absolute inset-0 bg-gradient-to-b from-navy-deep/80 via-navy-deep/35 to-navy-deep/85 md:bg-gradient-to-r md:from-navy-deep/90 md:via-navy-deep/60 md:to-navy-deep/10 md:rtl:bg-gradient-to-l"
       />
       <div
         aria-hidden="true"
