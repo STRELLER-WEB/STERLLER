@@ -28,7 +28,7 @@ app.get("/robots.txt", (_req, res) => {
   res.type("text/plain").send(renderRobots());
 });
 
-const isDev = process.env.NODE_ENV !== "production";
+const isDev = process.env.NODE_ENV === "development";
 const rootDir = path.resolve(import.meta.dirname, "..");
 
 /** Resolve the locale for an HTML request, or send a redirect and return null. */
@@ -96,7 +96,7 @@ async function main() {
     });
   }
 
-  const port = 5000;
+  const port = Number(process.env.PORT || 5000);
   server.listen(port, "0.0.0.0", () => {
     console.log(`STRELLER site serving on http://0.0.0.0:${port} (${isDev ? "dev" : "prod"})`);
   });
