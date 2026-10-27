@@ -1,5 +1,15 @@
 # STRELLER — Corporate Landing Page
 
+## Hostinger production deployment
+
+- Website: `https://sterller.com` (target recorded in `.hostinger/site.json`).
+- Node.js 22, Express, npm, build script `build`, entry file `dist/server.mjs`, no output-directory override.
+- `npm run build` builds both the frontend and the production server; `npm start` starts the compiled server. Set `NODE_ENV=production` in hosting and use the host-provided `PORT`.
+- Set `SITE_URL=https://sterller.com` and a strong random `SESSION_SECRET` in Hostinger's environment settings. Never commit secret values.
+- Set `DATA_DIR=/home/u709452107/domains/sterller.com/.streller-data` so inquiry storage sits outside `public_html` and survives deployments. Back up this directory separately; it contains `inquiries.db` and may contain SQLite WAL files.
+- `CONTACT_TO_EMAIL` and `RESEND_API_KEY` are optional. Without both, inquiries are saved in SQLite without email notifications.
+- Dependencies use the public npm registry so builds do not depend on Replit's private package server.
+
 Corporate trust site for **STRELLER (شتريلا)**, an Egyptian cultural-production company (Cairo, founded May 2024) developing traveling pharaonic exhibitions for European cities. Flagship project: **PHARAONIKA**.
 
 Live in 4 languages: English (`/en`), Arabic (`/ar`, RTL), German (`/de`), French (`/fr`).

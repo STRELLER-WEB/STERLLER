@@ -5,8 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "NODE_ENV=development tsx server/index.ts",
-    "build": "vite build",
-    "start": "NODE_ENV=production tsx server/index.ts",
+    "build": "vite build && esbuild server/index.ts --bundle --platform=node --packages=external --format=esm --outfile=dist/server.mjs",
+    "start": "node dist/server.mjs",
     "typecheck": "tsc --noEmit",
     "images": "tsx scripts/generate-webp.ts"
   },
@@ -20,6 +20,7 @@
     "autoprefixer": "^10.5.4",
     "better-sqlite3": "^12.11.1",
     "express": "^5.2.1",
+    "esbuild": "^0.28.1",
     "postcss": "^8.5.26",
     "react": "^19.2.8",
     "react-dom": "^19.2.8",
